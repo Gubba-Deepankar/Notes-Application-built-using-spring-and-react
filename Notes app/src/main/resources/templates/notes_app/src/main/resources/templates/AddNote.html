@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<meta charset="ISO-8859-1">
+<title>Add Notes</title>
+</head>
+<body>
+	<form action="#" th:action="@{/addNotes}" th:object="${note}" method="post"  class = "container" style = "padding-top : 35px">
+			<div class = "row text-center">
+				<label class = col>Title: </label>
+				<input th:field = "*{title}" type = "text" class = "col" required="required">
+			</div>
+			<div>
+				<label>Content: </label>
+				<textarea th:field = "*{content}" inputmode="text" rows="5" cols="5" required="required"></textarea>			
+			</div>
+			<button type="submit" class = "btn btn-success">Add</button>
+			<a href = "index.jsp" class = "btn btn-danger">Cancel</a>
+	</form>
+</body>
+</html>
